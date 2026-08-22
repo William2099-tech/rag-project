@@ -14,18 +14,28 @@ def health():
 @app.get("/test-gemini")
 def test_gemini():
     try:
-        # Step 5: Create a Gemini model
         model = genai.GenerativeModel("gemini-flash-latest")
+        topic = "the Python programming language"
 
-        # Send your prompt
-        prompt = "explain what the python programming language is and how it works"
-        response = model.generate_content(prompt)
+        # Step 1: Generate a short outline (intermediate result)
+        outline_prompt = (
+            f"Create a short 3-point outline about {topic}. "
+            "Use numbered points only."
+        )
+        outline_response = model.generate_content(outline_prompt)
+        outline = outline_response.text
+        print("Step 1 complete: outline generated.")
 
-        # Return the response text as JSON
-        return {"response": response.text}
+        # Step 2: Expand the outline into a full response
+        expand_prompt = (
+            f"Using this outline:\n{outline}\n\n"
+            f"Write a clear explanation of {topic}."
+        )
+        final_response = model.generate_content(expand_prompt)
+
+        return {"response": final_response.text}
 
     except Exception:
-        # Clear error for the user — no API key or other secrets exposed
         raise HTTPException(
             status_code=500,
             detail="Failed to get a response from Gemini. Check your API key and try again.",
