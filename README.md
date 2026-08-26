@@ -49,7 +49,7 @@ User Query
 - [x] **Step 8 — Pushed to GitHub** (`https://github.com/William2099-tech/rag-project`)
 - [x] **Old work backed up locally** (`rag-project-backup-week7`)
 - [x] **Old work backed up on GitHub** (`week7-archive` branch)
-- [ ] **Step 6 — Run the app** (`streamlit run app.py` → `http://localhost:8501`)
+- [x] **Step 6 — App runs** (`streamlit run app.py` → `http://localhost:8501`)
 - [ ] **Step 9 — Explore the codebase** (read files; no code changes yet)
 
 **Windows commands (CMD):**
