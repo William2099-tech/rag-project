@@ -39,6 +39,28 @@ User Query
 [app.py]           ← Display answer, sources, confidence
 ```
 
+## Setup Checklist
+
+- [x] **Step 3 — Virtual environment created** (`python -m venv venv`)
+- [x] **Step 3 — venv folder exists** in project root
+- [x] **Step 4 — Dependencies installed** (`pip install -r requirements.txt`)
+- [x] **Step 5 — `.env` file created** (copied from backup; key loaded)
+- [x] **Step 5 — API key NOT in Git** (only `.env.example` is tracked)
+- [x] **Step 8 — Pushed to GitHub** (`https://github.com/William2099-tech/rag-project`)
+- [x] **Old work backed up locally** (`rag-project-backup-week7`)
+- [x] **Old work backed up on GitHub** (`week7-archive` branch)
+- [ ] **Step 6 — Run the app** (`streamlit run app.py` → `http://localhost:8501`)
+- [ ] **Step 9 — Explore the codebase** (read files; no code changes yet)
+
+**Windows commands (CMD):**
+```cmd
+cd c:\Users\LilWi\Documents\rag-project
+venv\Scripts\activate.bat
+streamlit run app.py
+```
+
+---
+
 ## Setup
 
 ### 1. Clone the repository
